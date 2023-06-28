@@ -31,25 +31,21 @@ exports.up = function (knex) {
         .string("resource_name")
         .notNullable()
         .references("resource_name")
-        .inTable("resources")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .inTable("resources");
+
       tbl
         .integer("resource_id")
         .unsigned()
         .notNullable()
         .references("resource_id")
-        .inTable("resources")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .inTable("resources");
+
       tbl
         .integer("project_id")
         .unsigned()
         .notNullable()
         .references("project_id")
-        .inTable("projects")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .inTable("projects");
     });
 };
 
